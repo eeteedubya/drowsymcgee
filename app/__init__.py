@@ -1,12 +1,23 @@
 import cv2
-import os
+# import os
 from keras.models import load_model
 import numpy as np
 from pygame import mixer
 import time
-from flask import Flask, render_template, Response, redirect
 
-app = Flask(__name__)
+from flask import Flask, render_template, Response, redirect
+import os
+from keras.preprocessing import image
+# import matplotlib.pyplot as plt 
+# import numpy as np
+from keras.utils.np_utils import to_categorical
+import random,shutil
+from keras.models import Sequential
+from keras.layers import Dropout,Conv2D,Flatten,Dense, MaxPooling2D, BatchNormalization
+from keras.models import load_model
+
+
+app = Flask(__name__ , static_folder='../static')
 
 mixer.init()
 sound = mixer.Sound('alarm.wav')
