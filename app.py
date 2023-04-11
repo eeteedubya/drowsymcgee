@@ -17,7 +17,7 @@ from keras.layers import Dropout,Conv2D,Flatten,Dense, MaxPooling2D, BatchNormal
 from keras.models import load_model
 
 
-app = Flask(__name__ , static_folder='../static')
+app = Flask(__name__ )
 
 mixer.init()
 sound = mixer.Sound('alarm.wav')
